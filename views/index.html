@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Weather Page</title>
     <style>
+	body {
+	    background-color: rgba(100, 183, 217, 1.0);
+	}
+
         .weather {
             display: block;
         }
@@ -14,7 +18,7 @@
             border: 1px solid #32a8ff;
             border-radius: 10px;
             padding-right: 10px;
-            background-color: rgba(117, 190, 218, 0.3);
+            background-color: rgba(39, 85, 143, 0.3);
             cursor: pointer;
         }
 
@@ -56,13 +60,13 @@
         }
 
         .hourWeather {
-            background-color: rgba(168, 218, 110, 0.3);
+            background-color: rgba(39, 85, 143, 0.3);
             width: 100%;
         }
 
         .divHourWeather div {
             display: inline-block;
-            width: 120px;
+            width: 150px;
             font-size: 120%;
             height: 30px;
         }
@@ -203,7 +207,7 @@
             img.height = 60;
             div.appendChild(img);
             const p = document.createElement('strong');
-            p.textContent = 'temperature: ' + weather.temp_C;
+            p.textContent = 'Temperature: ' + weather.temp_C;
             p.classList.add('astronomy');
             div.appendChild(p);
             for (var key in weather.astronomy) {
@@ -231,7 +235,7 @@
                     const divTime = document.createElement('div');
                     if (i === 0) {
                         const p = document.createElement('p');
-                        p.style.textAlign = 'center';
+                        p.style.textAlign = 'left';
                         p.textContent = +key / 100 + ':00';
                         divTime.appendChild(p);
                         const img = document.createElement('img');
